@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DAO PHUONG NGOC | Hogwarts Portfolio • FTU International Business</title>
+  <meta name="description" content="Official portfolio of Dao Phuong Ngoc - Foreign Trade University (FTU) International Business. GPA 3.86/4.0, IELTS 8.0 (C1), FTU Merit Scholar, OTA Operations & Creative Marketing." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            magic: {
+              gold: '#d4af37',
+              goldBright: '#ffd700',
+              goldDark: '#996515',
+              night: '#040a16',
+              navy: '#071526',
+              cyanGlow: '#38bdf8',
+              parchment: '#fbf7ee',
+              emeraldInk: '#14532d',
+              waxRed: '#8b1c1c'
+            }
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="selection:bg-amber-500/30 selection:text-amber-200">
+
+  <!-- Native Background Audio (Hedwig's Theme Orchestral Soundtrack) -->
+  <audio id="bg-audio" src="assets/audio/hedwig.mp3" loop preload="auto"></audio>
+
+  <!-- Outer Film Poster Double Gold Frame (25th Anniversary Movie Aesthetic) -->
+  <div class="film-poster-border hidden sm:block"></div>
+
+  <!-- Background Animated Stardust Canvas -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- Top Navigation Bar -->
+  <header class="fixed top-0 left-0 w-full z-40 bg-[#040a16]/90 backdrop-blur-md border-b border-amber-500/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+      
+      <!-- Monogram Crest -->
+      <a href="#chamber-letter" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 rounded-full border-2 border-amber-400 bg-zinc-950 flex items-center justify-center shadow-lg shadow-amber-500/20 group-hover:scale-105 group-hover:border-cyan-300 transition duration-300">
+          <span class="font-magic-title text-xl text-gold-gradient">DN</span>
+        </div>
+        <div>
+          <div class="font-magic-title text-sm tracking-wider text-amber-200 group-hover:text-cyan-300 transition">DAO PHUONG NGOC</div>
+          <div class="text-[10px] tracking-widest uppercase font-mono text-zinc-400">FTU • K63 IB • GPA 3.86</div>
+        </div>
+      </a>
+
+      <!-- Chamber Navigation Links -->
+      <nav class="hidden md:flex items-center gap-6 text-xs tracking-wider uppercase font-cinzel text-zinc-300">
+        <a href="#chamber-letter" class="hover:text-amber-300 transition py-1 border-b border-transparent hover:border-amber-400">Acceptance Letter</a>
+        <a href="#chamber-pensieve" class="hover:text-cyan-300 transition py-1 border-b border-transparent hover:border-cyan-400">Pensieve Memories</a>
+        <a href="#chamber-credentials" class="hover:text-amber-300 transition py-1 border-b border-transparent hover:border-amber-400">Proof Vault</a>
+        <a href="#chamber-skills" class="hover:text-cyan-300 transition py-1 border-b border-transparent hover:border-cyan-400">Grimoire of Skills</a>
+        <a href="#chamber-owlery" class="hover:text-amber-300 transition py-1 border-b border-transparent hover:border-amber-400">Owl Post</a>
+      </nav>
+
+      <!-- Ambient Background Music Toggle Button -->
+      <div class="flex items-center gap-3">
+        <button
+          id="btn-ambient-music"
+          title="Click to play Hedwig's Theme in background"
+          class="flex items-center gap-2 px-3.5 py-2 rounded-full border border-amber-500/40 bg-zinc-900/90 text-xs font-cinzel text-zinc-300 hover:border-amber-300 transition shadow-md group cursor-pointer"
+        >
+          <span id="ambient-music-icon" class="text-sm animate-pulse">🔈</span>
+          <span id="ambient-music-label" class="text-[11px] font-semibold group-hover:text-amber-300">Play Hedwig's Theme</span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- CHAMBER 1: The Hogwarts Acceptance Envelope & Letter -->
+  <section id="chamber-letter" class="relative z-10 pt-32 pb-16 md:pt-36 md:pb-24 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+    
+    <!-- Header Badge -->
+    <div class="text-center mb-8">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-950/40 border border-cyan-500/40 text-xs uppercase tracking-widest text-cyan-300 font-cinzel mb-3">
+        <span>✦</span>
+        <span>HOGWARTS SCHOOL OF COMMERCE & LEADERSHIP</span>
+        <span>✦</span>
+      </div>
+      <h1 class="text-4xl sm:text-6xl md:text-7xl font-bold font-magic-title text-gold-gradient tracking-wide mb-2 drop-shadow-2xl">
+        DAO PHUONG NGOC
+      </h1>
+      <p class="text-sm sm:text-base font-cinzel text-cyan-200/90 tracking-wider">
+        International Business • Foreign Trade University (FTU) • Hanoi Campus
+      </p>
+    </div>
+
+    <!-- The 3D Film Envelope (Philosopher's Stone Prop Replica) -->
+    <div class="envelope-wrapper mx-auto max-w-2xl mb-12">
+      <div id="film-envelope" class="film-envelope rounded-3xl p-8 sm:p-12 text-center relative overflow-hidden shadow-2xl cursor-pointer" onclick="window.toggleEnvelope()">
+        
+        <!-- Triangle Flap -->
+        <div class="envelope-flap"></div>
+
+        <!-- Envelope Front: Calligraphy Address in Emerald Green Ink -->
+        <div class="relative z-10 py-6">
+          <div class="text-[11px] font-cinzel font-bold text-amber-900 tracking-widest uppercase mb-4">
+            HOGWARTS OF COMMERCE & LEADERSHIP
+          </div>
+
+          <!-- Crest -->
+          <div class="w-16 h-16 mx-auto mb-4 rounded-full border-2 border-[#14532d] flex items-center justify-center bg-white/70 shadow-inner">
+            <span class="font-magic-title text-2xl text-[#14532d] font-bold">H</span>
+          </div>
+
+          <!-- Emerald Green Address Calligraphy -->
+          <div class="font-emerald-ink text-2xl sm:text-3xl text-[#14532d] font-bold leading-relaxed space-y-1">
+            <div class="tracking-wide">MISS P. NGOC DAO</div>
+            <div class="text-lg sm:text-xl font-medium">School of International Business (K63)</div>
+            <div class="text-lg sm:text-xl font-medium">Foreign Trade University (FTU)</div>
+            <div class="text-base sm:text-lg italic">91 Chua Lang Street, Dong Da</div>
+            <div class="text-sm sm:text-base uppercase tracking-widest font-cinzel font-bold pt-2">HANOI, VIETNAM</div>
+          </div>
+        </div>
+
+        <!-- 3D Red Wax Seal Stamp with Clickable Trigger -->
+        <div class="relative z-30 mt-6 inline-flex flex-col items-center">
+          <div class="w-16 h-16 rounded-full wax-seal flex items-center justify-center text-amber-100 font-magic-title text-2xl font-bold shadow-2xl border-2 border-red-950 animate-pulse">
+            FTU
+          </div>
+          <div id="wax-seal-prompt" class="mt-3 px-4 py-1.5 rounded-full bg-zinc-950/80 text-amber-300 font-cinzel text-xs border border-amber-500/40 shadow-lg">
+            ⚡ Tap Red Wax Seal to Open Letter & Music ⚡
+          </div>
+        </div>
+      </div>
+
+      <!-- Inner Acceptance Letter (Slides Out Upon Breaking Seal) -->
+      <div id="inner-letter-sheet" class="inner-letter-sheet rounded-3xl p-8 sm:p-12 mt-6 hidden opacity-0 translate-y-12 transition-all duration-700 relative">
+        <div class="ornate-corner ornate-corner-tl"></div>
+        <div class="ornate-corner ornate-corner-tr"></div>
+        <div class="ornate-corner ornate-corner-bl"></div>
+        <div class="ornate-corner ornate-corner-br"></div>
+
+        <!-- Letterhead -->
+        <div class="text-center border-b border-[#14532d]/30 pb-6 mb-6">
+          <div class="font-cinzel text-xs uppercase tracking-[0.3em] text-[#14532d] font-bold">
+            HOGWARTS OF COMMERCE & LEADERSHIP
+          </div>
+          <div class="text-xs text-[#14532d]/70 italic mt-1">
+            Headmistress: Prof. Minerva McGonagall & FTU Directorate
+          </div>
+        </div>
+
+        <!-- Letter Content -->
+        <div class="font-parchment text-xl sm:text-2xl text-[#1e293b] leading-relaxed space-y-4">
+          <p class="font-bold font-cinzel text-lg text-[#0f172a]">
+            Dear Miss Dao,
+          </p>
+          <p>
+            We take immense pleasure in presenting your official admission to the forefront of global enterprise and international trade at Foreign Trade University, distinguished by an outstanding academic GPA of 3.86/4.0 and an IELTS Academic score of 8.0 (CEFR C1).
+          </p>
+          <p class="text-lg italic text-[#334155]">
+            Your records exhibit an exceptional balance between analytical operational rigor in short-term hospitality channel management at CYGNUS Startup and visionary brand communication leadership across Dynamic FTU Innovation Club and CHC FTU.
+          </p>
+          <p class="font-cinzel text-xs text-[#14532d] font-bold pt-2 italic">
+            "Words and strategic vision are, in our humble opinion, our most inexhaustible source of magic."
+          </p>
+        </div>
+
+        <!-- Letter Signature -->
+        <div class="mt-8 pt-6 border-t border-[#14532d]/30 flex flex-wrap items-center justify-between gap-4">
+          <div>
+            <div class="font-magic-title text-base text-[#0f172a]">Dao Phuong Ngoc</div>
+            <div class="text-xs text-zinc-600 font-cinzel">Bachelor of International Business (K63)</div>
+          </div>
+          <a href="#chamber-pensieve" class="px-6 py-2.5 rounded-xl wax-seal text-white font-cinzel text-xs font-bold tracking-wider hover:scale-105 transition shadow-lg">
+            Explore Chamber Memories Below ✦
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Metric Cards with Direct Jump Mappings -->
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-4xl mx-auto">
+      
+      <!-- Stat 1: GPA / Scholarship -->
+      <div
+        onclick="window.jumpToCredential('cred-scholarship')"
+        class="parchment-card p-5 text-center cursor-pointer border border-amber-500/30 hover:border-amber-400 group transition duration-300"
+      >
+        <div class="text-[11px] uppercase tracking-widest text-cyan-300 font-cinzel mb-1 flex items-center justify-center gap-1">
+          <span>FTU Cumulative GPA</span>
+          <span class="text-xs text-amber-400 group-hover:translate-x-1 transition">↗</span>
+        </div>
+        <div class="text-3xl font-bold font-magic-title text-gold-gradient mb-0.5">3.86 / 4.0</div>
+        <div class="text-xs text-zinc-400 italic">Top Academic Standing • Click for Proof</div>
+      </div>
+
+      <!-- Stat 2: IELTS -->
+      <div
+        onclick="window.jumpToCredential('cred-ielts')"
+        class="parchment-card p-5 text-center cursor-pointer border border-cyan-500/30 hover:border-cyan-400 group transition duration-300"
+      >
+        <div class="text-[11px] uppercase tracking-widest text-cyan-300 font-cinzel mb-1 flex items-center justify-center gap-1">
+          <span>English Mastery</span>
+          <span class="text-xs text-cyan-400 group-hover:translate-x-1 transition">↗</span>
+        </div>
+        <div class="text-3xl font-bold font-magic-title text-cyan-gradient mb-0.5">IELTS 8.0</div>
+        <div class="text-xs text-zinc-400 italic">C1 CEFR (R: 9.0, L: 8.5) • Click for Proof</div>
+      </div>
+
+      <!-- Stat 3: Merit Award -->
+      <div
+        onclick="window.jumpToCredential('cred-scholarship')"
+        class="parchment-card p-5 text-center cursor-pointer border border-amber-500/30 hover:border-amber-400 group transition duration-300"
+      >
+        <div class="text-[11px] uppercase tracking-widest text-cyan-300 font-cinzel mb-1 flex items-center justify-center gap-1">
+          <span>University Award</span>
+          <span class="text-xs text-amber-400 group-hover:translate-x-1 transition">↗</span>
+        </div>
+        <div class="text-3xl font-bold font-magic-title text-gold-gradient mb-0.5">Merit Scholar</div>
+        <div class="text-xs text-zinc-400 italic">FTU Encouragement Award (Marked Row 344)</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CHAMBER 2: The Pensieve of Experience (Keyword-Driven Interactive Filter) -->
+  <section id="chamber-pensieve" class="relative z-10 py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto border-t border-cyan-950/60">
+    <div class="text-center mb-10">
+      <div class="text-xs uppercase tracking-widest text-cyan-300 font-cinzel mb-2">✦ STRATEGIC EXECUTION & LEADERSHIP ✦</div>
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold font-magic-title text-cyan-gradient mb-3">
+        THE PENSIEVE OF EXPERIENCE
+      </h2>
+      <p class="text-sm sm:text-base text-zinc-400 font-cinzel max-w-2xl mx-auto">
+        Click keywords below to filter memory strands and reveal specific tactical competencies:
+      </p>
+
+      <!-- Interactive Keyword Filter Mapping Bar -->
+      <div class="flex items-center justify-center gap-2 mt-6 flex-wrap">
+        <button
+          onclick="window.filterExperienceByKeyword('all')"
+          data-keyword="all"
+          class="btn-exp-keyword px-4 py-1.5 text-xs rounded-full bg-cyan-500/20 text-cyan-300 border border-cyan-400 font-cinzel font-semibold shadow-[0_0_12px_rgba(56,189,248,0.3)] transition"
+        >
+          All Memories
+        </button>
+        <button
+          onclick="window.filterExperienceByKeyword('ota')"
+          data-keyword="ota"
+          class="btn-exp-keyword px-4 py-1.5 text-xs rounded-full border border-zinc-800 text-zinc-400 hover:text-cyan-200 transition font-cinzel"
+        >
+          OTA Channel Ops
+        </button>
+        <button
+          onclick="window.filterExperienceByKeyword('revenue')"
+          data-keyword="revenue"
+          class="btn-exp-keyword px-4 py-1.5 text-xs rounded-full border border-zinc-800 text-zinc-400 hover:text-cyan-200 transition font-cinzel"
+        >
+          Revenue & Pricing
+        </button>
+        <button
+          onclick="window.filterExperienceByKeyword('pr')"
+          data-keyword="pr"
+          class="btn-exp-keyword px-4 py-1.5 text-xs rounded-full border border-zinc-800 text-zinc-400 hover:text-cyan-200 transition font-cinzel"
+        >
+          PR & Campaigns
+        </button>
+        <button
+          onclick="window.filterExperienceByKeyword('leadership')"
+          data-keyword="leadership"
+          class="btn-exp-keyword px-4 py-1.5 text-xs rounded-full border border-zinc-800 text-zinc-400 hover:text-cyan-200 transition font-cinzel"
+        >
+          Team Leadership
+        </button>
+      </div>
+    </div>
+
+    <!-- Cards Injected Dynamically by main.js -->
+    <div id="pensieve-cards-container"></div>
+  </section>
+
+  <!-- CHAMBER 3: The Proof Vault (Trophy Room with Tab-Driven Relics & Inline Verification) -->
+  <section id="chamber-credentials" class="relative z-10 py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto border-t border-amber-950/60">
+    <div class="text-center mb-12">
+      <div class="text-xs uppercase tracking-widest text-amber-400 font-cinzel mb-2">✦ VERIFIED OFFICIAL CREDENTIALS ✦</div>
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold font-magic-title text-gold-gradient mb-3">
+        THE PROOF VAULT & TROPHY ROOM
+      </h2>
+      <p class="text-sm sm:text-base text-zinc-400 font-cinzel max-w-2xl mx-auto">
+        Click each credential tab below to inspect verified documents with marked student name:
+      </p>
+
+      <!-- Credential Relic Selector Tabs -->
+      <div class="flex items-center justify-center gap-3 mt-6 flex-wrap">
+        <button
+          onclick="window.selectCredentialTab('cred-scholarship')"
+          data-cred-id="cred-scholarship"
+          class="btn-cred-tab px-4 py-2.5 rounded-2xl text-xs sm:text-sm font-bold font-cinzel border-2 border-amber-400 bg-amber-500/20 text-amber-300 shadow-[0_0_15px_rgba(255,215,0,0.2)] transition"
+        >
+          🎓 FTU Merit Scholarship (Marked)
+        </button>
+        <button
+          onclick="window.selectCredentialTab('cred-hsg')"
+          data-cred-id="cred-hsg"
+          class="btn-cred-tab px-4 py-2.5 rounded-2xl text-xs sm:text-sm font-cinzel border border-zinc-800 bg-zinc-900/80 text-zinc-400 hover:text-amber-200 transition"
+        >
+          🏅 Provincial Contest 3rd Prize (Marked)
+        </button>
+        <button
+          onclick="window.selectCredentialTab('cred-ielts')"
+          data-cred-id="cred-ielts"
+          class="btn-cred-tab px-4 py-2.5 rounded-2xl text-xs sm:text-sm font-cinzel border border-zinc-800 bg-zinc-900/80 text-zinc-400 hover:text-amber-200 transition"
+        >
+          📜 IELTS Academic 8.0 (C1 TRF)
+        </button>
+      </div>
+    </div>
+
+    <!-- Active Credential Display Container with Inline Proof -->
+    <div id="active-cred-display" class="max-w-5xl mx-auto"></div>
+  </section>
+
+  <!-- CHAMBER 4: The Grimoire of Skills (Discipline Tabs) -->
+  <section id="chamber-skills" class="relative z-10 py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto border-t border-cyan-950/60">
+    <div class="text-center mb-10">
+      <div class="text-xs uppercase tracking-widest text-cyan-300 font-cinzel mb-2">✦ TACTICAL CAPABILITIES ✦</div>
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold font-magic-title text-cyan-gradient mb-3">
+        THE GRIMOIRE OF SKILLS
+      </h2>
+      <p class="text-sm sm:text-base text-zinc-400 font-cinzel max-w-xl mx-auto">
+        Click magic discipline tabs to explore competencies honed across startup battles and campus initiatives:
+      </p>
+
+      <!-- Skill Category Tabs -->
+      <div class="flex items-center justify-center gap-3 mt-6 flex-wrap">
+        <button
+          onclick="window.selectSkillTab('charms')"
+          data-skill-cat="charms"
+          class="btn-skill-tab px-4 py-2 rounded-2xl text-xs sm:text-sm font-bold font-cinzel border-2 border-cyan-400 bg-cyan-500/20 text-cyan-300 shadow-[0_0_15px_rgba(56,189,248,0.2)] transition"
+        >
+          ✨ Charms & Global Comms
+        </button>
+        <button
+          onclick="window.selectSkillTab('transfiguration')"
+          data-skill-cat="transfiguration"
+          class="btn-skill-tab px-4 py-2 rounded-2xl text-xs sm:text-sm font-cinzel border border-zinc-800 bg-zinc-900/80 text-zinc-400 hover:text-cyan-200 transition"
+        >
+          🎨 Transfiguration & Visuals
+        </button>
+        <button
+          onclick="window.selectSkillTab('arithmancy')"
+          data-skill-cat="arithmancy"
+          class="btn-skill-tab px-4 py-2 rounded-2xl text-xs sm:text-sm font-cinzel border border-zinc-800 bg-zinc-900/80 text-zinc-400 hover:text-cyan-200 transition"
+        >
+          📊 Arithmancy & Strategic Ops
+        </button>
+      </div>
+    </div>
+
+    <!-- Active Skill Container -->
+    <div id="active-skill-display"></div>
+  </section>
+
+  <!-- CHAMBER 5: The Owlery & Dispatch (Direct Contact) -->
+  <section id="chamber-owlery" class="relative z-10 py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto border-t border-amber-950/60">
+    <div class="text-center mb-10">
+      <div class="text-xs uppercase tracking-widest text-amber-400 font-cinzel mb-2">✦ DIRECT DISPATCH ✦</div>
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold font-magic-title text-gold-gradient mb-3">
+        THE OWLERY & DISPATCH
+      </h2>
+      <p class="text-sm sm:text-base text-zinc-400 font-cinzel max-w-xl mx-auto">
+        Connect directly with Dao Phuong Ngoc for internship opportunities and strategic collaborations:
+      </p>
+    </div>
+
+    <!-- Owl Parchment Card -->
+    <div class="parchment-card p-8 sm:p-12 rounded-3xl border border-amber-500/50 shadow-2xl relative">
+      <div class="ornate-corner ornate-corner-tl"></div>
+      <div class="ornate-corner ornate-corner-tr"></div>
+      <div class="ornate-corner ornate-corner-bl"></div>
+      <div class="ornate-corner ornate-corner-br"></div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+        <!-- Email -->
+        <div class="p-4 rounded-xl bg-zinc-900 border border-amber-900/40 text-center flex flex-col justify-between">
+          <div>
+            <div class="text-[11px] text-amber-400 uppercase font-cinzel mb-1">Owl Post (Email)</div>
+            <div class="text-sm font-semibold text-zinc-200 break-all">daongocconglac@gmail.com</div>
+          </div>
+          <button id="btn-copy-email" class="mt-3 py-1.5 px-3 text-xs rounded-md bg-amber-500/10 hover:bg-amber-500/20 text-amber-300 border border-amber-500/30 transition cursor-pointer">
+            Copy Email Address
+          </button>
+          <div id="copy-toast-text" class="text-[10px] text-emerald-400 mt-1 hidden font-mono">Copied to quill!</div>
+        </div>
+
+        <!-- Phone -->
+        <div class="p-4 rounded-xl bg-zinc-900 border border-amber-900/40 text-center flex flex-col justify-between">
+          <div>
+            <div class="text-[11px] text-amber-400 uppercase font-cinzel mb-1">Direct Telecommunication</div>
+            <div class="text-sm font-semibold text-zinc-200">0975116719</div>
+          </div>
+          <a href="tel:0975116719" class="mt-3 py-1.5 px-3 text-xs rounded-md bg-amber-500/10 hover:bg-amber-500/20 text-amber-300 border border-amber-500/30 transition block">
+            Call Direct Line
+          </a>
+        </div>
+
+        <!-- Location -->
+        <div class="p-4 rounded-xl bg-zinc-900 border border-amber-900/40 text-center flex flex-col justify-between">
+          <div>
+            <div class="text-[11px] text-amber-400 uppercase font-cinzel mb-1">Base of Operations</div>
+            <div class="text-sm font-semibold text-zinc-200">Dong Da, Hanoi</div>
+          </div>
+          <div class="mt-3 py-1.5 px-3 text-xs text-cyan-300 font-mono">
+            Vietnam
+          </div>
+        </div>
+      </div>
+
+      <!-- Action Button -->
+      <div class="pt-6 border-t border-zinc-800 text-center">
+        <a
+          href="mailto:daongocconglac@gmail.com?subject=[Internship Inquiry] Contacting Dao Phuong Ngoc (FTU)"
+          class="inline-flex items-center gap-3 px-8 py-4 rounded-2xl wax-seal text-white font-cinzel font-bold text-sm tracking-wider shadow-xl hover:scale-105 transition"
+        >
+          <span>🦉</span>
+          <span>Dispatch an Owl Post Inquiry</span>
+          <span>✨</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Quote -->
+    <div class="text-center mt-12 text-zinc-500">
+      <p class="font-parchment text-lg italic text-amber-200/60 max-w-xl mx-auto mb-2">
+        "Words are, in my not-so-humble opinion, our most inexhaustible source of magic." — Albus Dumbledore
+      </p>
+      <div class="text-xs font-mono text-zinc-600">
+        © 2026 Dao Phuong Ngoc • International Business Portfolio
+      </div>
+    </div>
+  </section>
+
+  <!-- ALOHOMORA PROOF LIGHTBOX MODAL WITH FULL-SCREEN ZOOM -->
+  <div id="proof-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 modal-backdrop hidden">
+    <div class="parchment-card w-full max-w-4xl max-h-[92vh] overflow-y-auto rounded-3xl border-2 border-amber-400 shadow-2xl p-6 md:p-8 relative">
+      <div class="ornate-corner ornate-corner-tl"></div>
+      <div class="ornate-corner ornate-corner-tr"></div>
+      <div class="ornate-corner ornate-corner-bl"></div>
+      <div class="ornate-corner ornate-corner-br"></div>
+
+      <!-- Header -->
+      <div class="flex items-start justify-between gap-4 border-b border-amber-500/30 pb-4 mb-4">
+        <div>
+          <div class="text-[11px] uppercase tracking-widest text-amber-400 font-cinzel mb-1 flex items-center gap-1.5">
+            <span>📜</span>
+            <span>VERIFIED CREDENTIAL ARCHIVE • NAME HIGHLIGHTED</span>
+          </div>
+          <h3 id="proof-modal-title" class="text-xl md:text-2xl font-bold font-cinzel text-gold-gradient">
+            FTU Scholarship Decision Registry
+          </h3>
+          <p id="proof-modal-issuer" class="text-xs text-cyan-300 font-mono mt-0.5">
+            Foreign Trade University (FTU)
+          </p>
+        </div>
+        <button
+          id="btn-close-modal"
+          class="px-3.5 py-1.5 rounded-lg border border-red-800 bg-red-950 text-red-200 hover:bg-red-900 text-xs font-cinzel font-bold transition flex items-center gap-1 cursor-pointer"
+        >
+          <span>✕</span>
+          <span>Close Vault</span>
+        </button>
+      </div>
+
+      <!-- Zoomed Callout Frame (For scholarship row 344) -->
+      <div id="proof-modal-zoom-container" class="hidden mb-4 p-3 bg-amber-950/40 rounded-xl border border-amber-500/60">
+        <div class="text-[11px] font-cinzel text-amber-300 font-bold mb-2 flex items-center gap-2">
+          <span>🔍</span>
+          <span>NAME LOCATION HIGHLIGHTED IN DETAIL (ROW 344):</span>
+        </div>
+        <img
+          id="proof-modal-zoom-img"
+          src=""
+          alt="Zoomed Name Proof"
+          class="w-full rounded-lg border border-amber-400/50 bg-white"
+        />
+      </div>
+
+      <!-- Full Document Preview Frame -->
+      <div class="relative bg-zinc-950 rounded-xl overflow-hidden border border-amber-500/30 mb-4 flex items-center justify-center">
+        <img
+          id="proof-modal-img"
+          src=""
+          alt="Official Document Scan"
+          class="w-full max-h-[50vh] object-contain cursor-zoom-in hover:scale-[1.02] transition duration-300"
+          onclick="window.open(this.src, '_blank')"
+        />
+        <div class="absolute bottom-2 right-2 px-2.5 py-1 rounded bg-black/80 text-[10px] text-amber-300 border border-amber-500/30 font-mono pointer-events-none">
+          🔍 Click image to open original full-size file
+        </div>
+      </div>
+
+      <!-- Verification Notes -->
+      <div class="bg-zinc-900/90 p-4 rounded-xl border border-amber-900/50 space-y-2 text-xs">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <span class="font-mono text-amber-300 font-semibold" id="proof-modal-scores"></span>
+          <span class="px-2.5 py-0.5 rounded bg-emerald-950 text-emerald-300 border border-emerald-700 font-mono">
+            ✓ Verified & Cross-Referenced
+          </span>
+        </div>
+        <p class="text-zinc-400 text-[11px] font-mono border-t border-zinc-800 pt-2" id="proof-modal-note"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript Modules -->
+  <script src="js/hedwig.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/particles.js"></script>
+  <script src="js/wand.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
