@@ -1,0 +1,257 @@
+/* ==========================================================================
+   Hogwarts 25th Anniversary Magical Theme - Stylesheet
+   Tailored to Movie Aesthetic, Authentic Film Letter, and Interactive Games
+   ========================================================================== */
+
+:root {
+  --color-parchment: #fbf7ee;
+  --color-parchment-dark: #e8dbbf;
+  --color-gold: #d4af37;
+  --color-gold-bright: #ffd700;
+  --color-gold-dark: #996515;
+  --color-ocean-deep: #040a16;
+  --color-night-blue: #071526;
+  --color-cyan-glow: #38bdf8;
+  --color-emerald-ink: #14532d;
+  --color-wax-seal: #8b1c1c;
+  --font-magic-title: 'Cinzel Decorative', cursive, serif;
+  --font-serif-header: 'Cinzel', serif;
+  --font-parchment-body: 'Cormorant Garamond', 'EB Garamond', serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 9px;
+}
+::-webkit-scrollbar-track {
+  background: #040a16;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #996515, #ffd700, #38bdf8, #996515);
+  border-radius: 6px;
+  border: 2px solid #040a16;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ffd700;
+}
+
+/* Global Background matching Movie Poster */
+body {
+  background: radial-gradient(circle at 50% 20%, #0c233c 0%, #06111f 55%, #030810 100%);
+  color: #e2e8f0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Outer Ornate Film Poster Gold Frame */
+.film-poster-border {
+  position: fixed;
+  inset: 10px;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  pointer-events: none;
+  z-index: 35;
+  box-shadow: inset 0 0 20px rgba(12, 35, 60, 0.8);
+}
+.film-poster-border::before {
+  content: '';
+  position: absolute;
+  inset: 4px;
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  pointer-events: none;
+}
+
+/* Typography */
+.font-magic-title {
+  font-family: var(--font-magic-title);
+}
+.font-cinzel {
+  font-family: var(--font-serif-header);
+}
+.font-parchment {
+  font-family: var(--font-parchment-body);
+}
+.font-emerald-ink {
+  font-family: 'Cormorant Garamond', serif;
+  color: var(--color-emerald-ink);
+  letter-spacing: 0.04em;
+}
+
+/* Golden & Cyan Gradient Text */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #fffbeb 0%, #ffd700 45%, #d4af37 80%, #92400e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-cyan-gradient {
+  background: linear-gradient(135deg, #ffffff 0%, #7dd3fc 45%, #38bdf8 80%, #0284c7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Movie-style Parchment Card */
+.parchment-card {
+  background: linear-gradient(145deg, rgba(12, 28, 48, 0.94), rgba(6, 15, 27, 0.98));
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 0 0 25px rgba(56, 189, 248, 0.08);
+  position: relative;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+.parchment-card:hover {
+  border-color: rgba(255, 215, 0, 0.6);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8), 0 0 35px rgba(56, 189, 248, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Ornate Corner Accents */
+.ornate-corner {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  pointer-events: none;
+}
+.ornate-corner-tl {
+  top: 6px;
+  left: 6px;
+  border-top: 2px solid #ffd700;
+  border-left: 2px solid #ffd700;
+}
+.ornate-corner-tr {
+  top: 6px;
+  right: 6px;
+  border-top: 2px solid #ffd700;
+  border-right: 2px solid #ffd700;
+}
+.ornate-corner-bl {
+  bottom: 6px;
+  left: 6px;
+  border-bottom: 2px solid #ffd700;
+  border-left: 2px solid #ffd700;
+}
+.ornate-corner-br {
+  bottom: 6px;
+  right: 6px;
+  border-bottom: 2px solid #ffd700;
+  border-right: 2px solid #ffd700;
+}
+
+/* ==========================================================================
+   AUTHENTIC HOGWARTS ACCEPTANCE ENVELOPE (Movie Film Prop)
+   ========================================================================== */
+
+.envelope-wrapper {
+  perspective: 1200px;
+}
+
+.film-envelope {
+  background: linear-gradient(135deg, #fbf6ea 0%, #f3ebd5 50%, #e8dec1 100%);
+  border: 1px solid #c8b796;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 30px rgba(212, 175, 55, 0.2);
+  position: relative;
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Envelope Flap (Triangle shape) */
+.envelope-flap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 48%;
+  background: linear-gradient(180deg, #efe5cb 0%, #e2d3b0 100%);
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  transform-origin: top;
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 20;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.film-envelope.open .envelope-flap {
+  transform: rotateX(180deg);
+  z-index: 5;
+}
+
+/* Wax Seal Button */
+.wax-seal {
+  background: radial-gradient(circle at 35% 35%, #c52222, #8b1c1c, #4a0909);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6), inset 0 2px 5px rgba(255, 255, 255, 0.4);
+  border: 2px solid #6b1414;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.wax-seal:hover {
+  transform: scale(1.08) rotate(4deg);
+  box-shadow: 0 8px 25px rgba(220, 38, 38, 0.6), inset 0 2px 6px rgba(255, 255, 255, 0.5);
+}
+
+/* Inner Letter Sheet that slides out */
+.inner-letter-sheet {
+  background: linear-gradient(180deg, #fdfbf7 0%, #fbf7ee 100%);
+  border: 1px solid #dcd1ba;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ==========================================================================
+   GOLDEN SNITCH MINI-GAME STYLES
+   ========================================================================== */
+
+.snitch-wing {
+  position: absolute;
+  top: 4px;
+  width: 24px;
+  height: 8px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.9), rgba(255, 215, 0, 0.4));
+  border-radius: 50% 50% 0 0;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+.snitch-wing-left {
+  left: -20px;
+  transform-origin: right center;
+  animation: flap-left 0.12s infinite alternate ease-in-out;
+}
+.snitch-wing-right {
+  right: -20px;
+  transform-origin: left center;
+  animation: flap-right 0.12s infinite alternate ease-in-out;
+}
+
+@keyframes flap-left {
+  0% { transform: rotate(-35deg) scaleY(0.6); }
+  100% { transform: rotate(45deg) scaleY(1.3); }
+}
+@keyframes flap-right {
+  0% { transform: rotate(35deg) scaleY(0.6); }
+  100% { transform: rotate(-45deg) scaleY(1.3); }
+}
+
+/* ==========================================================================
+   HEDWIG'S THEME GRAMOPHONE DISC ANIMATION
+   ========================================================================== */
+
+@keyframes vinyl-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.spin-vinyl {
+  animation: vinyl-spin 4s linear infinite;
+}
+
+/* Floating musical notes */
+@keyframes note-float {
+  0% { opacity: 0; transform: translateY(0) scale(0.6); }
+  50% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(-24px) scale(1.1); }
+}
+.animate-note {
+  animation: note-float 1.8s ease-out infinite;
+}
+
+/* Lightbox Modal */
+.modal-backdrop {
+  background: rgba(3, 7, 14, 0.88);
+  backdrop-filter: blur(10px);
+}
